@@ -1,0 +1,234 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 18px;
+    scroll-behavior: smooth;
+    font-family: 'Albert Sans', sans-serif;
+}
+.logo{
+    width: 200px;
+    height: 200px;
+}
+
+a{
+    text-decoration: none;
+}
+/*navegacion*/
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color:#096386;
+}
+.navbar-nav{
+    justify-content: center;
+    align-items: center;
+}
+/*NAVEGACION-ANIMACION*/
+a.right {
+    position: relative; 
+}
+  
+a.right:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    right: 0;
+    background-color: #F0EEC8;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out; 
+}
+  
+a.right:hover:before {
+    visibility: visible;
+    width: 100%; 
+}
+
+
+/*ARTICLE*/
+article{
+    background-color: #00B7A8;
+    height: auto;
+}
+figure{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.FotoMe{
+    height: 300px;
+    border-radius:50%;
+    margin-top: 10px;
+}
+p{
+    padding: 10px;
+}
+#name, #titulo, #skills{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+h3{
+    font-size: 20px bold;
+}
+.sobre_mi{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+/*SKILLS*/
+.skill{
+    position: relative;
+    transition: all 0.3s;
+}
+.skill:hover{
+    transform: translateY(25px);
+}
+.skill .skill-1{
+    max-width: 100%;
+    cursor: pointer;
+}
+.skill-1{
+    height: 50px;
+}
+.skill{
+    display: flex;
+    flex-direction: row;
+}
+.tipo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/*BOTON*/
+.CV{
+    background-color: #00B7A8;
+}
+.boton{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 50px;
+}
+.button {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 3px;
+    border-radius: 6px;
+    overflow: hidden; }
+  
+.button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(115deg, #4fcf70, #fad648, #a767e5, #12bcfe, #44ce7b);
+    background-size: 50% 100%;
+    border-radius: inherit; }
+  
+.button:hover::before {
+    animation: animate_border .75s linear infinite; }
+  
+.button span {
+    position: relative;
+    z-index: 2;
+    display: block;
+    background-color: #000;
+    padding: 13px 20px;
+    border-radius: 3px; 
+}
+/*SECTION o CONTACTO*/
+section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 150px;
+    background-color: #00B7A8;
+}
+
+/*FOOTER*/
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #F0EEC8;
+    height: 100px;
+}
+
+/*RESPONSIVE*/
+@media screen and (max-width: 600px) {
+    .FotoMe{
+        height: 200px;
+    }
+    .titulo_name{
+        display: flex;
+        flex-direction: column;
+    }
+    h1{
+        align-items: center;
+        font-size: 1.2rem;
+    }
+    h2{
+        font-size: 1rem;
+    }
+    p{
+        font-size: .8rem;
+    }
+    #name{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .skill{
+        position: relative;
+        transition: all 0.3s;
+    }
+    .skill:hover{
+        transform: translateY(25px);
+    }
+    .skill .skill-1{
+        max-width: 100%;
+        cursor: pointer;
+    }
+    .skill-1{
+        height: 30px;
+        justify-content: space-around;
+    }
+    .skill{
+        display: flex;
+        flex-direction: row;
+    }
+    .tipo {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        font-size: .5rem;
+    }
+    .icono{
+        height: 30px;
+    }
+    a h3 h5{
+        font-size: 1rem;
+    }
+    .logo{
+        height: 100px;
+        width: 100px;
+    }
+    .navbar-nav{
+        justify-content: center;
+        align-items: center;
+    }
+}
